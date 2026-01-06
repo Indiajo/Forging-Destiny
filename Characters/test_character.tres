@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://cgx0lpo684aqq"]
+
+[ext_resource type="Script" uid="uid://lgtcopcnitbw" path="res://core/CharacterData.gd" id="1_1w8n7"]
+[ext_resource type="SpriteFrames" uid="uid://cc1tt8jomx0nq" path="res://Characters/blacksmith_frames.tres" id="2_2ekg6"]
+
+[resource]
+script = ExtResource("1_1w8n7")
+id = "blacksmith"
+display_name = "Blacksmith"
+max_health = 120
+max_mana = 80
+move_speed = 95.0
+roll_speed = 180.0
+sprite_frames = ExtResource("2_2ekg6")
+metadata/_custom_type_script = "uid://lgtcopcnitbw"

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bdtyepgs0557i"]
+
+[ext_resource type="Script" uid="uid://b3e8nrbtlv03u" path="res://Weapons/Weapon.gd" id="1_dl457"]
+[ext_resource type="Texture2D" uid="uid://ddo83ppmq7rop" path="res://Player/BasicSword.tres" id="2_dl457"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfgt3"]
+size = Vector2(13.456955, 7.743625)
+
+[node name="Sword" type="Node2D" unique_id=373698834]
+rotation = -3.1335545
+script = ExtResource("1_dl457")
+weapon_id = null
+damage = null
+knockback_force = null
+front_offset = Vector2(0, 0)
+back_offset = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1629975654]
+position = Vector2(7, 0)
+texture = ExtResource("2_dl457")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=221084906 groups=["weapon_hitbox"]]
+position = Vector2(7, 0)
+collision_layer = 4
+collision_mask = 14
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=297121635]
+position = Vector2(3.2284775, -0.028948069)
+shape = SubResource("RectangleShape2D_mfgt3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=410551818]

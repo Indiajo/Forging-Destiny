@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://qiidr1fr28a"]
+
+[ext_resource type="PackedScene" uid="uid://bdtyepgs0557i" path="res://Weapons/Types/Sword.tscn" id="1_62j1j"]
+[ext_resource type="Script" uid="uid://c5c6vt53fi23v" path="res://core/WeaponData.gd" id="1_e2pbq"]
+[ext_resource type="Texture2D" uid="uid://ddo83ppmq7rop" path="res://Player/BasicSword.tres" id="3_wo4xp"]
+
+[resource]
+script = ExtResource("1_e2pbq")
+id = "basic_sword"
+weapon_type = "Sword"
+damage = 5
+sprite = ExtResource("3_wo4xp")
+scene = ExtResource("1_62j1j")
+metadata/_custom_type_script = "uid://c5c6vt53fi23v"

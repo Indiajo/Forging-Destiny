@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://p1yq2mokkn5n"]
+
+[ext_resource type="Script" uid="uid://b3e8nrbtlv03u" path="res://Weapons/Weapon.gd" id="1_vcq86"]
+
+[node name="Weapon" type="Node2D" unique_id=439703225]
+script = ExtResource("1_vcq86")
+front_offset = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1235080117]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1252930173]
+collision_layer = 4
+collision_mask = 14
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=213167143]
