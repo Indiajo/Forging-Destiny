@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dtujnhr8snri7"]
+[gd_scene load_steps=71 format=3 uid="uid://dtujnhr8snri7"]
 
 [ext_resource type="Texture2D" uid="uid://dwdjc10yjsq68" path="res://Assets/Players/Body All Base Player Movement-Sheet.png" id="1_rihsh"]
 [ext_resource type="Script" uid="uid://dqdrvkfcoxd1s" path="res://Player/Player.gd" id="2_dewec"]
@@ -123,9 +123,25 @@ tracks/1/keys = {
 "values": [54, 55, 56, 57, 58]
 }
 
+[sub_resource type="Animation" id="Animation_ib3vm"]
+resource_name = "bow1_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_yifbt"]
+resource_name = "bow1_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_vtj8b"]
+resource_name = "bow2_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_s0mko"]
+resource_name = "bow2_front"
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_3mea3"]
 resource_name = "breath_back"
-length = 2.0
+length = 4.0
 loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
@@ -135,7 +151,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 1.75, 2, 3.75),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [90, 91, 92, 93]
@@ -147,7 +163,7 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 1.75, 2, 3.75),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [90, 91, 92, 93]
@@ -155,6 +171,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8g4oa"]
 resource_name = "breath_front"
+length = 4.0
 loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
@@ -164,7 +181,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 1.75, 2, 3.75),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [9, 10, 11, 12]
@@ -176,11 +193,19 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 1.75, 2, 3.75),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [9, 10, 11, 12]
 }
+
+[sub_resource type="Animation" id="Animation_xw4su"]
+resource_name = "club_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_bgaaw"]
+resource_name = "club_front"
+step = 0.1
 
 [sub_resource type="Animation" id="Animation_u5tep"]
 resource_name = "death_back"
@@ -240,9 +265,18 @@ tracks/1/keys = {
 "values": [72, 73, 74, 75, 76, 77, 78, 79, 80]
 }
 
+[sub_resource type="Animation" id="Animation_i325y"]
+resource_name = "elementalslash_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_4n5ed"]
+resource_name = "elementalslash_front"
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_roy6y"]
 resource_name = "hurt_back"
-step = 0.25
+length = 0.7
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -250,7 +284,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [144, 145, 146, 147]
@@ -262,7 +296,7 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [144, 145, 146, 147]
@@ -270,8 +304,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_5wa8t"]
 resource_name = "hurt_front"
-length = 2.0
-step = 0.25
+length = 0.7
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -279,7 +313,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [63, 64, 65, 66]
@@ -291,7 +325,7 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [63, 64, 65, 66]
@@ -382,7 +416,6 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_d7xyo"]
 resource_name = "interact_back"
-length = 2.0
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -411,7 +444,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_0j2ni"]
 resource_name = "interact_front"
-length = 2.0
 step = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -496,10 +528,50 @@ tracks/1/keys = {
 "values": [27, 28, 29, 30, 31, 32]
 }
 
+[sub_resource type="Animation" id="Animation_yyr8h"]
+resource_name = "overhead_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_78fhc"]
+resource_name = "overhead_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_7w4lt"]
+resource_name = "polearm1_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_wo5nf"]
+resource_name = "polearm1_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_ww5s2"]
+resource_name = "polearm2_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_croik"]
+resource_name = "polearm2_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_yf47d"]
+resource_name = "punch_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_ps8ct"]
+resource_name = "punch_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_jvfa1"]
+resource_name = "punchjump_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_7uipr"]
+resource_name = "punchjump_front"
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_3nb2p"]
 resource_name = "roll_back"
-length = 2.0
-step = 0.25
+length = 1.25
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -507,7 +579,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.70000005, 0.9, 1.05),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [117, 118, 119, 120, 121, 122]
@@ -519,7 +591,7 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.70000005, 0.9, 1.05),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [117, 118, 119, 120, 121, 122]
@@ -527,8 +599,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_j23h2"]
 resource_name = "roll_front"
-length = 2.0
-step = 0.25
+length = 1.25
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -536,7 +608,7 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.7, 0.9, 1.05),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [36, 37, 38, 39, 40, 41]
@@ -548,15 +620,47 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.7, 0.9, 1.05),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [36, 37, 38, 39, 40, 41]
 }
 
+[sub_resource type="Animation" id="Animation_gv3fu"]
+resource_name = "sidesweep_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_x2ho1"]
+resource_name = "sideswipe_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_rqaa0"]
+resource_name = "sword1_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_hqjia"]
+resource_name = "sword1_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_o1b5h"]
+resource_name = "sword2_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_x70vp"]
+resource_name = "sword2_front"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_eennk"]
+resource_name = "upsweep_back"
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_xu7fl"]
+resource_name = "upsweep_front"
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_7v5gs"]
 resource_name = "walk_back"
-length = 3.0
+length = 2.0
 loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
@@ -566,10 +670,10 @@ tracks/0/path = NodePath("HeadSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [99, 100, 101, 102, 103, 104, 105, 106, 107]
+"values": [99, 100, 101, 102, 103, 104, 105, 106]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -578,15 +682,15 @@ tracks/1/path = NodePath("BodySprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [99, 100, 101, 102, 103, 104, 105, 106, 107]
+"values": [99, 100, 101, 102, 103, 104, 105, 106]
 }
 
 [sub_resource type="Animation" id="Animation_vlldt"]
 resource_name = "walk_front"
-length = 2.5
+length = 2.0
 loop_mode = 1
 step = 0.25
 tracks/0/type = "value"
@@ -618,10 +722,18 @@ tracks/1/keys = {
 _data = {
 &"block_back": SubResource("Animation_evw08"),
 &"block_front": SubResource("Animation_v0k0e"),
+&"bow1_back": SubResource("Animation_ib3vm"),
+&"bow1_front": SubResource("Animation_yifbt"),
+&"bow2_back": SubResource("Animation_vtj8b"),
+&"bow2_front": SubResource("Animation_s0mko"),
 &"breath_back": SubResource("Animation_3mea3"),
 &"breath_front": SubResource("Animation_8g4oa"),
+&"club_back": SubResource("Animation_xw4su"),
+&"club_front": SubResource("Animation_bgaaw"),
 &"death_back": SubResource("Animation_u5tep"),
 &"death_front": SubResource("Animation_p7tob"),
+&"elementalslash_back": SubResource("Animation_i325y"),
+&"elementalslash_front": SubResource("Animation_4n5ed"),
 &"hurt_back": SubResource("Animation_roy6y"),
 &"hurt_front": SubResource("Animation_5wa8t"),
 &"idle_back": SubResource("Animation_dm7nj"),
@@ -630,8 +742,26 @@ _data = {
 &"interact_front": SubResource("Animation_0j2ni"),
 &"jump_back": SubResource("Animation_8sa4y"),
 &"jump_front": SubResource("Animation_s1rgi"),
+&"overhead_back": SubResource("Animation_yyr8h"),
+&"overhead_front": SubResource("Animation_78fhc"),
+&"polearm1_back": SubResource("Animation_7w4lt"),
+&"polearm1_front": SubResource("Animation_wo5nf"),
+&"polearm2_back": SubResource("Animation_ww5s2"),
+&"polearm2_front": SubResource("Animation_croik"),
+&"punch_back": SubResource("Animation_yf47d"),
+&"punch_front": SubResource("Animation_ps8ct"),
+&"punchjump_back": SubResource("Animation_jvfa1"),
+&"punchjump_front": SubResource("Animation_7uipr"),
 &"roll_back": SubResource("Animation_3nb2p"),
 &"roll_front": SubResource("Animation_j23h2"),
+&"sidesweep_front": SubResource("Animation_gv3fu"),
+&"sideswipe_back": SubResource("Animation_x2ho1"),
+&"sword1_back": SubResource("Animation_rqaa0"),
+&"sword1_front": SubResource("Animation_hqjia"),
+&"sword2_back": SubResource("Animation_o1b5h"),
+&"sword2_front": SubResource("Animation_x70vp"),
+&"upsweep_back": SubResource("Animation_eennk"),
+&"upsweep_front": SubResource("Animation_xu7fl"),
 &"walk_back": SubResource("Animation_7v5gs"),
 &"walk_front": SubResource("Animation_vlldt")
 }
@@ -672,7 +802,7 @@ animation = &"player/roll_front"
 blend_point_0/node = SubResource("AnimationNodeAnimation_s1rgi")
 blend_point_0/pos = -1.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_j23h2")
-blend_point_1/pos = 1.0
+blend_point_1/pos = 0.0
 blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vlldt"]
@@ -698,6 +828,11 @@ advance_expression = "is_moving"
 advance_mode = 2
 advance_expression = "!is_moving"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6ysni"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "is_moving"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_vlldt"]
 states/End/position = Vector2(978, 118)
 states/IdleSpace/node = SubResource("AnimationNodeBlendSpace1D_6ysni")
@@ -707,7 +842,7 @@ states/Movement/position = Vector2(484, 51)
 states/RollSpace/node = SubResource("AnimationNodeBlendSpace1D_0j2ni")
 states/RollSpace/position = Vector2(582, 160)
 states/Start/position = Vector2(253, 67)
-transitions = ["Start", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_vlldt"), "IdleSpace", "RollSpace", SubResource("AnimationNodeStateMachineTransition_v0k0e"), "RollSpace", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_5wa8t"), "Movement", "RollSpace", SubResource("AnimationNodeStateMachineTransition_p7tob"), "IdleSpace", "Movement", SubResource("AnimationNodeStateMachineTransition_ddoul"), "Movement", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_8g4oa")]
+transitions = ["Start", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_vlldt"), "IdleSpace", "RollSpace", SubResource("AnimationNodeStateMachineTransition_v0k0e"), "RollSpace", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_5wa8t"), "Movement", "RollSpace", SubResource("AnimationNodeStateMachineTransition_p7tob"), "IdleSpace", "Movement", SubResource("AnimationNodeStateMachineTransition_ddoul"), "Movement", "IdleSpace", SubResource("AnimationNodeStateMachineTransition_8g4oa"), "RollSpace", "Movement", SubResource("AnimationNodeStateMachineTransition_6ysni")]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ddoul"]
 radius = 5.0
@@ -752,8 +887,8 @@ tree_root = SubResource("AnimationNodeStateMachine_vlldt")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/IdleSpace/blend_position = 0.5105783
-parameters/Movement/blend_position = -1.0
-parameters/RollSpace/blend_position = -0.7559944
+parameters/Movement/blend_position = 0.90550065
+parameters/RollSpace/blend_position = 0.79689705
 
 [node name="WeaponHand" type="Marker2D" parent="."]
 position = Vector2(-4, -2)

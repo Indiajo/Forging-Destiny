@@ -3,11 +3,12 @@ extends CharacterBody2D
 # =================================================
 # CHARACTER DATA
 # =================================================
-@export var character_data: CharacterData:
-	set(value):
-		character_data = value
-		if is_inside_tree():
-			apply_character(value)
+@export var character_data: CharacterData = null:
+	set = _set_character_data
+func _set_character_data(value: CharacterData) -> void:
+	character_data = value
+	if is_inside_tree():
+		apply_character(value)
 
 # =================================================
 # Animations
@@ -98,7 +99,6 @@ func apply_character(data: CharacterData):
 # =================================================
 func update_animation_parameters():
 	var moving := velocity.length() > 0.1
-	print("Moving:", moving)
 
 	# Parameters the StateMachine can see
 	#anim_tree.set("parameters/is_moving", moving)

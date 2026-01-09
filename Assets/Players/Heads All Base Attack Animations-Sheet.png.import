@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca86mvcsyvny3"
-path="res://.godot/imported/PlayerFrontHeadMovementOnly.png-c396c8b5bf71d641c8032abebb59b541.ctex"
+uid="uid://5b60i00gxecd"
+path="res://.godot/imported/Heads All Base Attack Animations-Sheet.png-0eb309e3175f0f2d64361965f4d470bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Players/PlayerFrontHeadMovementOnly.png"
-dest_files=["res://.godot/imported/PlayerFrontHeadMovementOnly.png-c396c8b5bf71d641c8032abebb59b541.ctex"]
+source_file="res://Assets/Players/Heads All Base Attack Animations-Sheet.png"
+dest_files=["res://.godot/imported/Heads All Base Attack Animations-Sheet.png-0eb309e3175f0f2d64361965f4d470bf.ctex"]
 
 [params]
 

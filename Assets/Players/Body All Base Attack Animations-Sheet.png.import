@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgonj5ih1k1ec"
-path="res://.godot/imported/PlayerFrontBodyAttackAnimation.png-f99325bf2d04a4be435967aca74b40ec.ctex"
+uid="uid://2x8frptuntev"
+path="res://.godot/imported/Body All Base Attack Animations-Sheet.png-de8b766dfd706affc7d3ea0f644a46a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Players/PlayerFrontBodyAttackAnimation.png"
-dest_files=["res://.godot/imported/PlayerFrontBodyAttackAnimation.png-f99325bf2d04a4be435967aca74b40ec.ctex"]
+source_file="res://Assets/Players/Body All Base Attack Animations-Sheet.png"
+dest_files=["res://.godot/imported/Body All Base Attack Animations-Sheet.png-de8b766dfd706affc7d3ea0f644a46a3.ctex"]
 
 [params]
 
